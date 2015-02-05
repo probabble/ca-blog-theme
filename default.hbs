@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+       <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/mainsitecss/css/foundation.css"}}" />    
+    <link rel="stylesheet" type="text/css" href="{{asset "css/mainsitecss/css/normalize.css"}}" /> 
+        <link rel="stylesheet" type="text/css" href="{{asset "css/mainsitecss/css/custom.css"}}" />
+    <script type="text/javascript" src="{{asset "js/foundation/modernizr.js"}}"></script>      
+
+    <div id="top"></div>
+        <div class="contain-to-grid">
+        <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+                <li class="">
+                    <a href="#top"><div><img src="http://www.calthorpeanalytics.com/img/CalthorpeAnalytics_Logo.png" class="logo"></div></a>
+                </li>
+                <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                <!-- <li class="toggle-topbar menu-icon">
+                    <a href="#">
+                        <span></span>
+                    </a>
+                </li> -->
+            </ul>
+            
+            <section class="top-bar-section">
+                <!-- Right Nav Section -->
+                <ul id="nav" class="right">
+                    <li>
+                        
+                    </li>
+
+                    <li>
+                        <a href="http://www.calthorpeanalytics.com/index.html#services">Our Approach</a>
+                    </li>
+                    <li>
+                        <a href="/http://www.calthorpeanalytics.comindex.html#questions">What We Do</a>
+                    </li>
+                    <li>
+                        <a href="http://www.calthorpeanalytics.com/index.html#software">Tools</a>
+                    </li>
+                    <li>
+                        <a href="http://www.calthorpeanalytics.com/index.html#projects">Projects</a>
+                    </li>
+					<li>
+                        <a href="http://www.calthorpeanalytics.com/index.html#team">Team</a>
+                    </li>
+                    <li>
+                        <a href="http://www.calthorpeanalytics.com/index.html#contact">Contact Us</a>
+                    </li>
+                    <li>
+                    	<a href="{{blog.url}}"><span class="label-link">Blog</span></a>
+                    </li>
+                </ul>
+				
+            </section>
+        </nav>
+    </div>
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+    
+    
+</head>
+<body class="{{body_class}}">
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+  
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for Casper }}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/foundation/jquery.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/foundation/foundation.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/foundation/foundation.topbar.js"}}"></script>
+<script>
+$(document).foundation();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+
+
+{{! The main content area on the homepage }}
+<div class="top-space"> 
+	<h2 class="page-title">{{@blog.title}} <span class="page-title-special">Blog</span></h2>
+    <h4 class="page-description">{{@blog.description}}</h2>
+</div>
+<div id="sidebar" class="columns right">
+    {{> "sidebar"}}
+
+</div>
+<main id="content" class="content" role="main">
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
+
+</main>
